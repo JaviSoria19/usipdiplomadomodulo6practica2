@@ -1,8 +1,8 @@
 <template>
-  <div class="row-md-12">
-    <h2 class="fw-bold">Bienvenido, {{ user?.nombres }}</h2>
-    <p>{{ user?.tipoPerfil }}</p>
-    <button @click="logout" class="btn btn-secondary">Cerrar sesión</button>
+  <div class="container mt-4">
+    <h2 class="fw-bold">Bienvenido, {{ user?.nombres }} {{ user?.apellidoPaterno }} {{ user?.apellidoMaterno }} - {{ user?.tipoPerfil }}</h2>
+    <p>Por favor navegue mediante los botones que están encima de este mensaje.</p>
+    <button @click="logout" class="btn btn-warning"><i class="fas fa-arrow-right-from-bracket"></i> Cerrar Sesión</button>
   </div>
 </template>
 

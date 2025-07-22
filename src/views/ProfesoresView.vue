@@ -7,15 +7,16 @@
             <div class="col-md-6">
                 <input type="text" class="form-control" placeholder="Buscar profesor..." v-model="searchTerm" />
             </div>
-            <div class="col-md-2">
-                <button class="btn btn-success w-100" @click="abrirCrear"><i class="fas fa-chalkboard-teacher"></i> Nuevo Profesor</button>
+            <div class="col-md-6 text-end">
+                <button class="btn btn-success" @click="abrirCrear"><i class="fas fa-chalkboard-teacher"></i> Nuevo Profesor</button>
             </div>
         </div>
 
         <h3 class="mb-4 fw-bold text-start"><i class="fas fa-table"></i> Registros:</h3>
-        <table class="table table-bordered table-hover">
+        <table class="table table-bordered table-striped">
             <thead class="table-light">
                 <tr>
+                    <th>#</th>
                     <th>Nombre completo</th>
                     <th>C.I.</th>
                     <th>Título</th>
@@ -24,14 +25,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="prof in profesoresFiltrados" :key="prof.id">
-                    <td>{{ prof.user?.nombres }} {{ prof.user?.apellidoPaterno }} {{ prof.user?.apellidoMaterno }}</td>
-                    <td>{{ prof.user?.cedulaIdentidadNumero }} {{ prof.user?.cedulaIdentidadExpedido }}</td>
-                    <td>{{ prof.tituloAcademico }}</td>
-                    <td>{{ prof.numeroCelular }}</td>
+                <tr v-for="(profesor, index) in profesoresFiltrados" :key="profesor.id">
+                    <td>{{ index + 1 }}</td>
+                    <td>{{ profesor.user?.nombres }} {{ profesor.user?.apellidoPaterno }} {{ profesor.user?.apellidoMaterno }}</td>
+                    <td>{{ profesor.user?.cedulaIdentidadNumero }} {{ profesor.user?.cedulaIdentidadExpedido }}</td>
+                    <td>{{ profesor.tituloAcademico }}</td>
+                    <td>{{ profesor.numeroCelular }}</td>
                     <td class="text-center">
-                        <button class="btn btn-warning btn-sm me-2" @click="abrirEditar(prof)"><i class="fas fa-pen"></i> Editar</button>
-                        <button class="btn btn-danger btn-sm" @click="eliminarProfesor(prof.id)"><i class="fas fa-trash"></i> Eliminar</button>
+                        <button class="btn btn-warning btn-sm me-2" @click="abrirEditar(profesor)"><i class="fas fa-pen"></i> Editar</button>
+                        <button class="btn btn-danger btn-sm" @click="eliminarProfesor(profesor.id)"><i class="fas fa-trash"></i> Eliminar</button>
                     </td>
                 </tr>
             </tbody>
@@ -80,8 +82,8 @@ const abrirCrear = () => {
     mostrarModal.value = true
 }
 
-const abrirEditar = (prof) => {
-    profesorEditado.value = { ...prof }
+const abrirEditar = (profesor) => {
+    profesorEditado.value = { ...profesor }
     modoEdicion.value = true
     mostrarModal.value = true
 }

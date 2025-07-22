@@ -446,6 +446,13 @@
       "abreviatura": "LEN",
       "estado": "ACTIVO",
       "profesorId": 3
+    },
+    {
+      "id": 4,
+      "nombreAsignatura": "TRIGONOMETRÍA",
+      "abreviatura": "MAT.T",
+      "estado": "ACTIVO",
+      "profesorId": 4
     }
   ],
   "calificaciones": [

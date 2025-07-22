@@ -2,7 +2,8 @@
   <div class="container mt-4">
     <h2 class="mb-4 fw-bold">← Gestión de Estudiantes →</h2>
 
-    <h3 class="mb-4 fw-bold text-start"><i class="fas fa-filter"></i> Filtro y <i class="fas fa-search"></i> Búsqueda:</h3>
+    <h3 class="mb-4 fw-bold text-start"><i class="fas fa-filter"></i> Filtro y <i class="fas fa-search"></i> Búsqueda:
+    </h3>
     <div class="row mb-3">
       <div class="col-md-4">
         <input type="text" class="form-control" v-model="searchTerm" placeholder="Buscar estudiante..." />
@@ -13,15 +14,17 @@
           <option v-for="grupo in gruposSanguineos" :key="grupo" :value="grupo">{{ grupo }}</option>
         </select>
       </div>
-      <div class="col-md-2">
-        <button class="btn btn-success w-100" @click="abrirCrear"><i class="fas fa-user-graduate"></i> Nuevo Estudiante</button>
+      <div class="col-md-5 text-end">
+        <button class="btn btn-success" @click="abrirCrear"><i class="fas fa-user-graduate"></i> Nuevo
+          Estudiante</button>
       </div>
     </div>
 
     <h3 class="mb-4 fw-bold text-start"><i class="fas fa-table"></i> Registros:</h3>
-    <table class="table table-bordered table-hover">
+    <table class="table table-bordered table-striped">
       <thead class="table-light">
         <tr>
+          <th>#</th>
           <th>Nombre completo</th>
           <th>CI</th>
           <th>Alergia/s</th>
@@ -31,16 +34,19 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="e in estudiantesFiltrados" :key="e.id">
-          <td>{{ e.user?.nombres }} {{ e.user?.apellidoPaterno }} {{ e.user?.apellidoMaterno }}</td>
-          <td>{{ e.user?.cedulaIdentidadNumero }} {{ e.user?.cedulaIdentidadExpedido }}</td>
-          <td>{{ e.saludAlergias }}</td>
-          <td>{{ e.saludGrupoSanguineo }}</td>
-          <td>{{ e.curso?.nombreCurso }}</td>
+        <tr v-for="(estudiante, index) in estudiantesFiltrados" :key="estudiante.id">
+          <td>{{ index + 1 }}</td>
+          <td>{{ estudiante.user?.nombres }} {{ estudiante.user?.apellidoPaterno }} {{ estudiante.user?.apellidoMaterno
+            }}</td>
+          <td>{{ estudiante.user?.cedulaIdentidadNumero }} {{ estudiante.user?.cedulaIdentidadExpedido }}</td>
+          <td>{{ estudiante.saludAlergias }}</td>
+          <td>{{ estudiante.saludGrupoSanguineo }}</td>
+          <td>{{ estudiante.curso?.nombreCurso }}</td>
           <td class="text-center">
-            <button class="btn btn-warning btn-sm me-2" @click="abrirEditar(e)"><i class="fas fa-pen"></i>
+            <button class="btn btn-warning btn-sm me-2" @click="abrirEditar(estudiante)"><i class="fas fa-pen"></i>
               Editar</button>
-            <button class="btn btn-danger btn-sm" @click="eliminarEstudiante(e.id)"><i class="fas fa-trash"></i>
+            <button class="btn btn-danger btn-sm" @click="eliminarEstudiante(estudiante.id)"><i
+                class="fas fa-trash"></i>
               Eliminar</button>
           </td>
         </tr>
@@ -86,13 +92,13 @@ const cargarCursos = async () => {
 }
 
 const estudiantesFiltrados = computed(() => {
-  return estudiantes.value.filter(e => {
+  return estudiantes.value.filter(estudiante => {
     const texto = searchTerm.value.toLowerCase()
-    const coincideBusqueda = Object.values(e.user ?? {}).some(v =>
+    const coincideBusqueda = Object.values(estudiante.user ?? {}).some(v =>
       v?.toString().toLowerCase().includes(texto)
-    ) || (e.saludGrupoSanguineo ?? '').toLowerCase().includes(texto)
+    ) || (estudiante.saludGrupoSanguineo ?? '').toLowerCase().includes(texto)
 
-    const coincideGrupo = filtroGrupo.value === '' || e.saludGrupoSanguineo === filtroGrupo.value
+    const coincideGrupo = filtroGrupo.value === '' || estudiante.saludGrupoSanguineo === filtroGrupo.value
 
     return coincideBusqueda && coincideGrupo
   })
@@ -104,8 +110,8 @@ const abrirCrear = () => {
   mostrarModal.value = true
 }
 
-const abrirEditar = (e) => {
-  estudianteEditado.value = { ...e }
+const abrirEditar = (estudiante) => {
+  estudianteEditado.value = { ...estudiante }
   modoEdicion.value = true
   mostrarModal.value = true
 }

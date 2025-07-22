@@ -2,8 +2,10 @@
   <div class="rounded p-4 bg-light">
     <h2 class="fw-bold">PLATAFORMA EDUCATIVA</h2>
     <img src="https://www.svgrepo.com/show/500816/college.svg" alt="Logo" class="col-md-2 bg-primary border-dark img-thumbnail img-fluid mb-2"/>
-    <form @submit.prevent="handleLogin" class="login-form col-md-4 offset-md-4">
+    <form @submit.prevent="handleLogin" class="login-form col-md-4 offset-md-4 fw-bold">
+      <label class="form-label"><i class="fas fa-envelope"></i> E-mail:</label>
       <input v-model="email" placeholder="E-mail" class="form-control mb-2" />
+      <label class="form-label"><i class="fas fa-key"></i> Contraseña:</label>
       <input v-model="password" type="password" placeholder="Contraseña" class="form-control mb-2" />
       <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
       <p v-if="error" class="mt-2 bg-warning rounded text-danger fw-bold">¡CREDENCIALES INCORRECTAS!</p>

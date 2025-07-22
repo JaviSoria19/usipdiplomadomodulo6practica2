@@ -1,54 +1,65 @@
 <template>
-  <div class="container mt-4">
-    <h2 class="mb-4">Gestión de Asignaturas</h2>
+    <div class="container mt-4">
+        <h2 class="mb-4 fw-bold">← Gestión de Asignaturas →</h2>
 
-    <div class="row mb-3">
-      <div class="col-md-4">
-        <input type="text" class="form-control" v-model="searchTerm" placeholder="Buscar asignatura..." />
-      </div>
-      <div class="col-md-2">
-        <button class="btn btn-primary w-100" @click="abrirCrear">Nueva Asignatura</button>
-      </div>
+        <!-- Búsqueda -->
+        <h3 class="mb-4 fw-bold text-start"><i class="fas fa-search"></i> Búsqueda:</h3>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <input type="text" v-model="busqueda" class="form-control"
+                    placeholder="Buscar asignatura, abreviatura, estado, profesor..." />
+            </div>
+            <div class="col-md-6 text-end">
+                <button class="btn btn-success" @click="abrirModal()"><i class="fas fa-book"></i> Crear
+                    Asignatura</button>
+            </div>
+        </div>
+
+        <!-- Tabla -->
+        <h3 class="mb-4 fw-bold text-start"><i class="fas fa-table"></i> Registros:</h3>
+        <table class="table table-bordered table-striped">
+            <thead class="table-light">
+                <tr>
+                    <th>#</th>
+                    <th>Asignatura</th>
+                    <th>Abreviatura</th>
+                    <th>Estado</th>
+                    <th>Profesor</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(asignatura, index) in asignaturasFiltradas" :key="asignatura.id">
+                    <td>{{ index + 1 }}</td>
+                    <td>{{ asignatura.nombreAsignatura }}</td>
+                    <td>{{ asignatura.abreviatura }}</td>
+                    <td>{{ asignatura.estado }}</td>
+                    <td>
+                        <span v-if="asignatura.profesor?.user">
+                            {{ asignatura.profesor.user.nombres }} {{ asignatura.profesor.user.apellidoPaterno }}
+                        </span>
+                        <span v-else class="text-muted">Sin asignar</span>
+                    </td>
+                    <td>
+                        <button class="btn btn-sm btn-warning me-1" @click="abrirModal(asignatura)"><i class="fas fa-pen"></i>
+                            Editar</button>
+                        <button class="btn btn-sm btn-danger" @click="eliminarAsignatura(asignatura.id)"><i
+                                class="fas fa-trash"></i> Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <AsignaturaFormModal v-if="mostrarModal" :mostrar="mostrarModal" :modo-edicion="modoEdicion"
+            :asignatura-editada="asignaturaEditada" :profesores="profesores" @cerrar="cerrarModal"
+            @guardar="cargarAsignaturas" />
     </div>
-
-    <table class="table table-bordered table-hover">
-      <thead class="table-light">
-        <tr>
-          <th>Nombre</th>
-          <th>Abreviatura</th>
-          <th>Profesor</th>
-          <th class="text-center">Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="a in asignaturasFiltradas" :key="a.id">
-          <td>{{ a.nombreAsignatura }}</td>
-          <td>{{ a.abreviatura }}</td>
-          <td>{{ a.profesor?.user?.nombres }} {{ a.profesor?.user?.apellidoPaterno }}</td>
-          <td class="text-center">
-            <button class="btn btn-warning btn-sm me-2" @click="abrirEditar(a)">Editar</button>
-            <button class="btn btn-danger btn-sm" @click="eliminarAsignatura(a.id)">Eliminar</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-    <AsignaturaFormModal
-      v-if="mostrarModal"
-      :mostrar="mostrarModal"
-      :modo-edicion="modoEdicion"
-      :asignatura-editada="asignaturaEditada"
-      :profesores="profesores"
-      @cerrar="cerrarModal"
-      @guardar="cargarAsignaturas"
-    />
-  </div>
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from 'vue'
-import axios from '../axios'
-import AsignaturaFormModal from '../components/AsignaturaFormModal.vue'
+import { ref, computed, onMounted } from 'vue'
+import axios from 'axios'
+import AsignaturaFormModal from '@/components/AsignaturaFormModal.vue'
 
 const asignaturas = ref([])
 const profesores = ref([])
@@ -56,53 +67,53 @@ const profesores = ref([])
 const mostrarModal = ref(false)
 const modoEdicion = ref(false)
 const asignaturaEditada = ref(null)
-const searchTerm = ref('')
+
+const busqueda = ref('')
 
 const cargarAsignaturas = async () => {
-  const { data } = await axios.get('/asignaturas?_expand=profesor&_expand=profesor.user')
-  asignaturas.value = data
+    const resAsig = await axios.get('http://localhost:3000/asignaturas')
+    const resProf = await axios.get('http://localhost:3000/profesores?_expand=user')
+
+    // Fusionar manualmente profesor con user en cada asignatura
+    asignaturas.value = resAsig.data.map(asig => {
+        const prof = resProf.data.find(p => p.id === asig.profesorId)
+        return {
+            ...asig,
+            profesor: prof
+        }
+    })
+
+    profesores.value = resProf.data
 }
 
-const cargarProfesores = async () => {
-  const { data } = await axios.get('/profesores?_expand=user')
-  profesores.value = data
-}
-
-const asignaturasFiltradas = computed(() => {
-  const texto = searchTerm.value.toLowerCase()
-  return asignaturas.value.filter(a =>
-    a.nombreAsignatura.toLowerCase().includes(texto) ||
-    a.abreviatura.toLowerCase().includes(texto) ||
-    (a.profesor?.user?.nombres?.toLowerCase().includes(texto) || '') ||
-    (a.profesor?.user?.apellidoPaterno?.toLowerCase().includes(texto) || '')
-  )
-})
-
-const abrirCrear = () => {
-  asignaturaEditada.value = null
-  modoEdicion.value = false
-  mostrarModal.value = true
-}
-
-const abrirEditar = (a) => {
-  asignaturaEditada.value = { ...a }
-  modoEdicion.value = true
-  mostrarModal.value = true
+const abrirModal = (asig = null) => {
+    modoEdicion.value = !!asig
+    asignaturaEditada.value = asig ? { ...asig } : null
+    mostrarModal.value = true
 }
 
 const cerrarModal = () => {
-  mostrarModal.value = false
+    mostrarModal.value = false
 }
 
-const eliminarAsignatura = async (id) => {
-  if (confirm('¿Eliminar esta asignatura?')) {
-    await axios.delete(`/asignaturas/${id}`)
-    cargarAsignaturas()
-  }
+const eliminarAsignatura = async id => {
+    const confirmacion = confirm('¿Estás seguro de eliminar esta asignatura?')
+    if (confirmacion) {
+        await axios.delete(`http://localhost:3000/asignaturas/${id}`)
+        cargarAsignaturas()
+    }
 }
 
-onMounted(() => {
-  cargarAsignaturas()
-  cargarProfesores()
+const asignaturasFiltradas = computed(() => {
+    const texto = busqueda.value.toLowerCase()
+    return asignaturas.value.filter(asignatura =>
+        asignatura.nombreAsignatura.toLowerCase().includes(texto) ||
+        asignatura.abreviatura.toLowerCase().includes(texto) ||
+        asignatura.estado.toLowerCase().includes(texto) ||
+        asignatura.profesor?.user?.nombres.toLowerCase().includes(texto) ||
+        asignatura.profesor?.user?.apellidoPaterno.toLowerCase().includes(texto)
+    )
 })
+
+onMounted(cargarAsignaturas)
 </script>

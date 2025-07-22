@@ -15,9 +15,10 @@
 
         <!-- Tabla -->
         <h3 class="mb-4 fw-bold text-start"><i class="fas fa-table"></i> Registros:</h3>
-        <table class="table table-bordered table-hover">
+        <table class="table table-bordered table-striped">
             <thead class="table-light">
                 <tr>
+                    <th>#</th>
                     <th>Nombre</th>
                     <th>Dirección</th>
                     <th>Teléfono</th>
@@ -27,7 +28,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="colegio in colegiosFiltrados" :key="colegio.id">
+                <tr v-for="(colegio, index) in colegiosFiltrados" :key="colegio.id">
+                    <td>{{ index + 1 }}</td>
                     <td>{{ colegio.nombreColegio }}</td>
                     <td>{{ colegio.direccion }}</td>
                     <td>{{ colegio.telefono }}</td>

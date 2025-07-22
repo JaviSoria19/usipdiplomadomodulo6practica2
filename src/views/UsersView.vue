@@ -38,9 +38,10 @@
 
         <!-- Tabla -->
         <h3 class="mb-4 fw-bold text-start"><i class="fas fa-table"></i> Registros:</h3>
-        <table class="table table-bordered table-hover">
+        <table class="table table-bordered table-striped">
             <thead class="table-light">
                 <tr>
+                    <th>#</th>
                     <th>CI</th>
                     <th>Nombre completo</th>
                     <th>Perfil</th>
@@ -49,7 +50,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="user in usersFiltrados" :key="user.id">
+                <tr v-for="(user, index) in usersFiltrados" :key="user.id">
+                    <td>{{ index + 1 }}</td>
                     <td>{{ user.cedulaIdentidadNumero }} {{ user.cedulaIdentidadExpedido }}</td>
                     <td>{{ user.nombres }} {{ user.apellidoPaterno }} {{ user.apellidoMaterno }}</td>
                     <td>{{ user.tipoPerfil }}</td>
