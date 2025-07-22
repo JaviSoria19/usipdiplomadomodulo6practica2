@@ -35,8 +35,8 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" @click="$emit('cerrar')">Cancelar</button>
-            <button class="btn btn-primary" type="submit">Guardar</button>
+            <button class="btn btn-secondary" type="button" @click="$emit('cerrar')"><i class="fas fa-xmark"></i> Cancelar</button>
+            <button class="btn btn-primary" type="submit"><i class="fas fa-save"></i> Guardar</button>
           </div>
         </form>
       </div>

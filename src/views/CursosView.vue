@@ -30,7 +30,7 @@
                 </select>
             </div>
             <div class="col-md-2">
-                <button class="btn btn-primary w-100" @click="abrirCrear">Nuevo Curso</button>
+                <button class="btn btn-success w-100" @click="abrirCrear"><i class="fas fa-chalkboard"></i> Nuevo Curso</button>
             </div>
         </div>
 
@@ -53,8 +53,8 @@
                     <td>{{ curso.paralelo }}</td>
                     <td>{{ curso.estado }}</td>
                     <td class="text-center">
-                        <button class="btn btn-sm btn-warning me-2" @click="abrirEditar(curso)">Editar</button>
-                        <button class="btn btn-sm btn-danger" @click="eliminarCurso(curso.id)">Eliminar</button>
+                        <button class="btn btn-sm btn-warning me-2" @click="abrirEditar(curso)"><i class="fas fa-pen"></i> Editar</button>
+                        <button class="btn btn-sm btn-danger" @click="eliminarCurso(curso.id)"><i class="fas fa-trash"></i> Eliminar</button>
                     </td>
                 </tr>
             </tbody>

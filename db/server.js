@@ -9,7 +9,7 @@ const middlewares = jsonServer.defaults();
 app.db = router.db;
 
 const rules = auth.rewriter({
-  users: 660,
+  users: 666,
   cursos: 666,
   colegios: 666,
   profesores: 666,

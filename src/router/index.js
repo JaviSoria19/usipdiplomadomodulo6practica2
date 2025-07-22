@@ -3,6 +3,10 @@ import LoginView from '../views/LoginView.vue'
 import PanelView from '../views/PanelView.vue'
 import ColegiosView from '../views/ColegiosView.vue'
 import CursosView from '../views/CursosView.vue'
+import UsersView from '../views/UsersView.vue'
+import ProfesoresView from '../views/ProfesoresView.vue'
+import EstudiantesView from '../views/EstudiantesView.vue'
+import AsignaturasView from '../views/AsignaturasView.vue'
 
 const routes = [
   {
@@ -26,6 +30,26 @@ const routes = [
   {
     path: '/cursos',
     component: CursosView,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/users',
+    component: UsersView,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/profesores',
+    component: ProfesoresView,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/estudiantes',
+    component: EstudiantesView,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/asignaturas',
+    component: AsignaturasView,
     meta: { requiresAuth: true }
   }
 ]

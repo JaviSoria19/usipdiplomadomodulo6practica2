@@ -320,6 +320,45 @@
       "tipoPerfil": "ESTUDIANTE",
       "estado": "ACTIVO",
       "colegioId": 3
+    },
+    {
+      "email": "javisoar.2002@gmail.com",
+      "password": "$2a$10$RrGCSDvnVd5tcXOCHFofCeOxJitrKzQmBKBJz0qNay1wqLrfhoytG",
+      "nombres": "Javier Cristian",
+      "apellidoPaterno": "Soria",
+      "apellidoMaterno": "Arias",
+      "cedulaIdentidadNumero": "13023456",
+      "cedulaIdentidadExpedido": "CB",
+      "tipoPerfil": "ADMINISTRADOR",
+      "estado": "ACTIVO",
+      "colegioId": 4,
+      "id": 10
+    },
+    {
+      "email": "m.villarroel@gmail.com",
+      "password": "$2a$10$n3vvIXSj.X9pvGCKn3yebeBPG7j3zlV8X.ARvMhUz1UGZ.Yo0n/82",
+      "nombres": "Carlos Miguel",
+      "apellidoPaterno": "Villarroel",
+      "apellidoMaterno": "Galian",
+      "cedulaIdentidadNumero": "13056432",
+      "cedulaIdentidadExpedido": "CB",
+      "tipoPerfil": "PROFESOR",
+      "estado": "ACTIVO",
+      "colegioId": 4,
+      "id": 11
+    },
+    {
+      "email": "j.penharrieta@gmail.com",
+      "password": "$2a$10$CHa5.Yob9zwFcnuRm1.Xh.GyzYF6/tzY.dGXGXopfiaj3KK2Hn39O",
+      "nombres": "Juan",
+      "apellidoPaterno": "Peñarrieta",
+      "apellidoMaterno": "Ramos",
+      "cedulaIdentidadNumero": "12232345",
+      "cedulaIdentidadExpedido": "LP",
+      "tipoPerfil": "ESTUDIANTE",
+      "estado": "ACTIVO",
+      "colegioId": 4,
+      "id": 12
     }
   ],
   "profesores": [
@@ -343,6 +382,13 @@
       "numeroCelular": "65432123",
       "estado": "ACTIVO",
       "userId": 6
+    },
+    {
+      "tituloAcademico": "MAGISTER EN EDUCACIÓN, INGENIERÍA EN FÍSICA",
+      "numeroCelular": "723423",
+      "estado": "ACTIVO",
+      "userId": 11,
+      "id": 4
     }
   ],
   "estudiantes": [
@@ -369,6 +415,14 @@
       "estado": "ACTIVO",
       "userId": 9,
       "cursoId": 19
+    },
+    {
+      "id": 4,
+      "saludAlergias": "NINGUNA",
+      "saludGrupoSanguineo": "O+",
+      "estado": "ACTIVO",
+      "userId": 12,
+      "cursoId": "19"
     }
   ],
   "asignaturas": [
