@@ -1,6 +1,6 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> | 
+  <nav v-if="$route.path !== '/login'" class="bg-primary text-white">
+    <router-link to="/" class="text-white">Cerrar Sesión</router-link> | 
   </nav>
   <router-view/>
 </template>

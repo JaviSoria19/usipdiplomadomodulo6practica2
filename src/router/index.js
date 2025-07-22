@@ -3,8 +3,14 @@ import LoginView from '../views/LoginView.vue'
 import PanelView from '../views/PanelView.vue'
 
 const routes = [
-  { path: '/', redirect: '/login' },
-  { path: '/login', component: LoginView },
+  {
+    path: '/',
+    redirect: '/login'
+  },
+  {
+    path: '/login',
+    component: LoginView 
+  },
   {
     path: '/panel',
     component: PanelView,
