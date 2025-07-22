@@ -1,463 +1,471 @@
 {
-    "colegios": [
-        {
-            "id": 1,
-            "nombreColegio": "Colegio Central",
-            "direccion": "Av. Siempre Viva 123",
-            "telefono": "123-456-7890",
-            "sitioWeb": "www.colegiocentral.edu",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": 2,
-            "nombreColegio": "Unidad Educativa Libertad",
-            "direccion": "Calle Falsa 456",
-            "telefono": "987-654-3210",
-            "sitioWeb": "www.unidadeducativalibertad.edu",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": 3,
-            "nombreColegio": "Colegio Técnico San Martín",
-            "direccion": "Av. Principal 789",
-            "telefono": "456-789-1230",
-            "sitioWeb": "www.colegiotecnicosanmartin.edu",
-            "estado": "ACTIVO"
-        }
-    ],
-    "cursos": [
-        {
-            "id": "1",
-            "nombreCurso": "1° DE PRIMARIA \"A\"",
-            "nivel": "PRIMARIA",
-            "paralelo": "A",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "2",
-            "nombreCurso": "2° DE PRIMARIA \"A\"",
-            "nivel": "PRIMARIA",
-            "paralelo": "A",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "3",
-            "nombreCurso": "3° DE PRIMARIA \"A\"",
-            "nivel": "PRIMARIA",
-            "paralelo": "A",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "4",
-            "nombreCurso": "4° DE PRIMARIA \"A\"",
-            "nivel": "PRIMARIA",
-            "paralelo": "A",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "5",
-            "nombreCurso": "5° DE PRIMARIA \"A\"",
-            "nivel": "PRIMARIA",
-            "paralelo": "A",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "6",
-            "nombreCurso": "6° DE PRIMARIA \"A\"",
-            "nivel": "PRIMARIA",
-            "paralelo": "A",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "7",
-            "nombreCurso": "1° DE PRIMARIA \"B\"",
-            "nivel": "PRIMARIA",
-            "paralelo": "B",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "8",
-            "nombreCurso": "2° DE PRIMARIA \"B\"",
-            "nivel": "PRIMARIA",
-            "paralelo": "B",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "9",
-            "nombreCurso": "3° DE PRIMARIA \"B\"",
-            "nivel": "PRIMARIA",
-            "paralelo": "B",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "10",
-            "nombreCurso": "4° DE PRIMARIA \"B\"",
-            "nivel": "PRIMARIA",
-            "paralelo": "B",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "11",
-            "nombreCurso": "5° DE PRIMARIA \"B\"",
-            "nivel": "PRIMARIA",
-            "paralelo": "B",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "12",
-            "nombreCurso": "6° DE PRIMARIA \"B\"",
-            "nivel": "PRIMARIA",
-            "paralelo": "B",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "13",
-            "nombreCurso": "1° DE SECUNDARIA \"A\"",
-            "nivel": "SECUNDARIA",
-            "paralelo": "A",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "14",
-            "nombreCurso": "2° DE SECUNDARIA \"A\"",
-            "nivel": "SECUNDARIA",
-            "paralelo": "A",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "15",
-            "nombreCurso": "3° DE SECUNDARIA \"A\"",
-            "nivel": "SECUNDARIA",
-            "paralelo": "A",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "16",
-            "nombreCurso": "4° DE SECUNDARIA \"A\"",
-            "nivel": "SECUNDARIA",
-            "paralelo": "A",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "17",
-            "nombreCurso": "5° DE SECUNDARIA \"A\"",
-            "nivel": "SECUNDARIA",
-            "paralelo": "A",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "18",
-            "nombreCurso": "6° DE SECUNDARIA \"A\"",
-            "nivel": "SECUNDARIA",
-            "paralelo": "A",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "19",
-            "nombreCurso": "1° DE SECUNDARIA \"B\"",
-            "nivel": "SECUNDARIA",
-            "paralelo": "B",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "20",
-            "nombreCurso": "2° DE SECUNDARIA \"B\"",
-            "nivel": "SECUNDARIA",
-            "paralelo": "B",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "21",
-            "nombreCurso": "3° DE SECUNDARIA \"B\"",
-            "nivel": "SECUNDARIA",
-            "paralelo": "B",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "22",
-            "nombreCurso": "4° DE SECUNDARIA \"B\"",
-            "nivel": "SECUNDARIA",
-            "paralelo": "B",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "23",
-            "nombreCurso": "5° DE SECUNDARIA \"B\"",
-            "nivel": "SECUNDARIA",
-            "paralelo": "B",
-            "estado": "ACTIVO"
-        },
-        {
-            "id": "24",
-            "nombreCurso": "6° DE SECUNDARIA \"B\"",
-            "nivel": "SECUNDARIA",
-            "paralelo": "B",
-            "estado": "ACTIVO"
-        }
-    ],
-    "users": [
-        {
-            "id": 1,
-            "nombres": "Ana Torres",
-            "apellidoPaterno": "Torres",
-            "apellidoMaterno": "Gómez",
-            "cedulaIdentidadNumero": "12345678",
-            "cedulaIdentidadExpedido": "LP",
-            "email": "admin@admin.com",
-            "password": "$2b$12$HvYYF5K5kzK3NaDjBq9cQe8bdbC16zMeTu3A6zx5DeKH8K5Ed84ka",
-            "tipoPerfil": "ADMINISTRADOR",
-            "estado": "ACTIVO",
-            "colegioId": 1
-        },
-        {
-            "id": 2,
-            "nombres": "Luis",
-            "apellidoPaterno": "Pérez",
-            "apellidoMaterno": "Martínez",
-            "cedulaIdentidadNumero": "87654321",
-            "cedulaIdentidadExpedido": "CB",
-            "email": "l.perez@gmail.com",
-            "password": "$2b$12$HvYYF5K5kzK3NaDjBq9cQe8bdbC16zMeTu3A6zx5DeKH8K5Ed84ka",
-            "tipoPerfil": "ADMINISTRADOR",
-            "estado": "ACTIVO",
-            "colegioId": 2
-        },
-        {
-            "id": 3,
-            "nombres": "María",
-            "apellidoPaterno": "López",
-            "apellidoMaterno": "Hernández",
-            "cedulaIdentidadNumero": "11223344",
-            "cedulaIdentidadExpedido": "OR",
-            "email": "m.lopez@gmail.com",
-            "password": "$2b$12$HvYYF5K5kzK3NaDjBq9cQe8bdbC16zMeTu3A6zx5DeKH8K5Ed84ka",
-            "tipoPerfil": "ADMINISTRADOR",
-            "estado": "ACTIVO",
-            "colegioId": 3
-        },
-        {
-            "id": 4,
-            "nombres": "Pedro",
-            "apellidoPaterno": "Gómez",
-            "apellidoMaterno": "Ramírez",
-            "cedulaIdentidadNumero": "33445566",
-            "cedulaIdentidadExpedido": "LP",
-            "email": "",
-            "password": "",
-            "tipoPerfil": "PROFESOR",
-            "estado": "ACTIVO",
-            "colegioId": 1
-        },
-        {
-            "id": 5,
-            "nombres": "Laura",
-            "apellidoPaterno": "Martínez",
-            "apellidoMaterno": "Sánchez",
-            "cedulaIdentidadNumero": "99887766",
-            "cedulaIdentidadExpedido": "CB",
-            "email": "",
-            "password": "",
-            "tipoPerfil": "PROFESOR",
-            "estado": "ACTIVO",
-            "colegioId": 2
-        },
-        {
-            "id": 6,
-            "nombres": "Carlos",
-            "apellidoPaterno": "Díaz",
-            "apellidoMaterno": "Fernández",
-            "cedulaIdentidadNumero": "55667788",
-            "cedulaIdentidadExpedido": "OR",
-            "email": "",
-            "password": "",
-            "tipoPerfil": "PROFESOR",
-            "estado": "ACTIVO",
-            "colegioId": 3
-        },
-        {
-            "id": 7,
-            "nombres": "Elena",
-            "apellidoPaterno": "Suárez",
-            "apellidoMaterno": "García",
-            "cedulaIdentidadNumero": "22334455",
-            "cedulaIdentidadExpedido": "LP",
-            "email": "",
-            "password": "",
-            "tipoPerfil": "ESTUDIANTE",
-            "estado": "ACTIVO",
-            "colegioId": 1
-        },
-        {
-            "id": 8,
-            "nombres": "Andrés",
-            "apellidoPaterno": "Rojas",
-            "apellidoMaterno": "López",
-            "cedulaIdentidadNumero": "66778899",
-            "cedulaIdentidadExpedido": "CB",
-            "email": "",
-            "password": "",
-            "tipoPerfil": "ESTUDIANTE",
-            "estado": "ACTIVO",
-            "colegioId": 2
-        },
-        {
-            "id": 9,
-            "nombres": "Sofía",
-            "apellidoPaterno": "Mendoza",
-            "apellidoMaterno": "Gómez",
-            "cedulaIdentidadNumero": "44556677",
-            "cedulaIdentidadExpedido": "OR",
-            "email": "",
-            "password": "",
-            "tipoPerfil": "ESTUDIANTE",
-            "estado": "ACTIVO",
-            "colegioId": 3
-        }
-    ],
-    "profesores": [
-        {
-            "id": 1,
-            "tituloAcademico": "LICENCIATURA EN EDUCACIÓN",
-            "numeroCelular": "71234567",
-            "estado": "ACTIVO",
-            "userId": 4
-        },
-        {
-            "id": 2,
-            "tituloAcademico": "MAESTRÍA EN CIENCIAS DE LA EDUCACIÓN",
-            "numeroCelular": "69876543",
-            "estado": "ACTIVO",
-            "userId": 5
-        },
-        {
-            "id": 3,
-            "tituloAcademico": "DOCTORADO EN EDUCACIÓN",
-            "numeroCelular": "65432123",
-            "estado": "ACTIVO",
-            "userId": 6
-        }
-    ],
-    "estudiantes": [
-        {
-            "id": 1,
-            "saludAlergias": "NINGUNO",
-            "saludGrupoSanguineo": "A+",
-            "estado": "ACTIVO",
-            "userId": 7,
-            "cursoId": 1
-        },
-        {
-            "id": 2,
-            "saludAlergias": "AL POLVO",
-            "saludGrupoSanguineo": "B+",
-            "estado": "ACTIVO",
-            "userId": 8,
-            "cursoId": 13
-        },
-        {
-            "id": 3,
-            "saludAlergias": "A LAS MASCOTAS",
-            "saludGrupoSanguineo": "O-",
-            "estado": "ACTIVO",
-            "userId": 9,
-            "cursoId": 19
-        }
-    ],
-    "asignaturas": [
-        {
-            "id": 1,
-            "nombreAsignatura": "MATEMÁTICA",
-            "abreviatura": "MAT",
-            "estado": "ACTIVO",
-            "profesorId": 1
-        },
-        {
-            "id": 2,
-            "nombreAsignatura": "CIENCIAS SOCIALES",
-            "abreviatura": "C.S.",
-            "estado": "ACTIVO",
-            "profesorId": 2
-        },
-        {
-            "id": 3,
-            "nombreAsignatura": "LENGUAJE Y LITERATURA",
-            "abreviatura": "LEN",
-            "estado": "ACTIVO",
-            "profesorId": 3
-        }
-    ],
-    "calificaciones": [
-        {
-            "id": 1,
-            "nota": "95",
-            "gestion": "2025",
-            "trimestre": "1",
-            "estudianteId": 1,
-            "asignaturaId": 1
-        },
-        {
-            "id": 2,
-            "nota": "88",
-            "gestion": "2025",
-            "trimestre": "1",
-            "estudianteId": 1,
-            "asignaturaId": 2
-        },
-        {
-            "id": 3,
-            "nota": "76",
-            "gestion": "2025",
-            "trimestre": "1",
-            "estudianteId": 1,
-            "asignaturaId": 3
-        },
-        {
-            "id": 4,
-            "nota": "85",
-            "gestion": "2025",
-            "trimestre": "2",
-            "estudianteId": 2,
-            "asignaturaId": 1
-        },
-        {
-            "id": 5,
-            "nota": "90",
-            "gestion": "2025",
-            "trimestre": "2",
-            "estudianteId": 2,
-            "asignaturaId": 2
-        },
-        {
-            "id": 6,
-            "nota": "82",
-            "gestion": "2025",
-            "trimestre": "2",
-            "estudianteId": 2,
-            "asignaturaId": 3
-        },
-        {
-            "id": 7,
-            "nota": "78",
-            "gestion": "2025",
-            "trimestre": "3",
-            "estudianteId": 3,
-            "asignaturaId": 1
-        },
-        {
-            "id": 8,
-            "nota": "92",
-            "gestion": "2025",
-            "trimestre": "3",
-            "estudianteId": 3,
-            "asignaturaId": 2
-        },
-        {
-            "id": 9,
-            "nota": "89",
-            "gestion": "2025",
-            "trimestre": "3",
-            "estudianteId": 3,
-            "asignaturaId": 3
-        }
-    ]
+  "colegios": [
+    {
+      "id": 1,
+      "nombreColegio": "Colegio Central",
+      "direccion": "Av. Siempre Viva 123",
+      "telefono": "123-456-7890",
+      "sitioWeb": "www.colegiocentral.edu",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": 2,
+      "nombreColegio": "Unidad Educativa Libertad",
+      "direccion": "Calle Falsa 456",
+      "telefono": "987-654-3210",
+      "sitioWeb": "www.unidadeducativalibertad.edu",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": 3,
+      "nombreColegio": "Colegio Técnico San Martín",
+      "direccion": "Av. Principal 789",
+      "telefono": "456-789-1230",
+      "sitioWeb": "www.colegiotecnicosanmartin.edu",
+      "estado": "ACTIVO"
+    },
+    {
+      "nombreColegio": "Federico Froebel",
+      "direccion": "Calle Capuchinas Esq. Madre Perla",
+      "telefono": "4-4200750",
+      "sitioWeb": "www.froebel.edu.bo",
+      "estado": "ACTIVO",
+      "id": 4
+    }
+  ],
+  "cursos": [
+    {
+      "id": "1",
+      "nombreCurso": "1° DE PRIMARIA \"A\"",
+      "nivel": "PRIMARIA",
+      "paralelo": "A",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "2",
+      "nombreCurso": "2° DE PRIMARIA \"A\"",
+      "nivel": "PRIMARIA",
+      "paralelo": "A",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "3",
+      "nombreCurso": "3° DE PRIMARIA \"A\"",
+      "nivel": "PRIMARIA",
+      "paralelo": "A",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "4",
+      "nombreCurso": "4° DE PRIMARIA \"A\"",
+      "nivel": "PRIMARIA",
+      "paralelo": "A",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "5",
+      "nombreCurso": "5° DE PRIMARIA \"A\"",
+      "nivel": "PRIMARIA",
+      "paralelo": "A",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "6",
+      "nombreCurso": "6° DE PRIMARIA \"A\"",
+      "nivel": "PRIMARIA",
+      "paralelo": "A",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "7",
+      "nombreCurso": "1° DE PRIMARIA \"B\"",
+      "nivel": "PRIMARIA",
+      "paralelo": "B",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "8",
+      "nombreCurso": "2° DE PRIMARIA \"B\"",
+      "nivel": "PRIMARIA",
+      "paralelo": "B",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "9",
+      "nombreCurso": "3° DE PRIMARIA \"B\"",
+      "nivel": "PRIMARIA",
+      "paralelo": "B",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "10",
+      "nombreCurso": "4° DE PRIMARIA \"B\"",
+      "nivel": "PRIMARIA",
+      "paralelo": "B",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "11",
+      "nombreCurso": "5° DE PRIMARIA \"B\"",
+      "nivel": "PRIMARIA",
+      "paralelo": "B",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "12",
+      "nombreCurso": "6° DE PRIMARIA \"B\"",
+      "nivel": "PRIMARIA",
+      "paralelo": "B",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "13",
+      "nombreCurso": "1° DE SECUNDARIA \"A\"",
+      "nivel": "SECUNDARIA",
+      "paralelo": "A",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "14",
+      "nombreCurso": "2° DE SECUNDARIA \"A\"",
+      "nivel": "SECUNDARIA",
+      "paralelo": "A",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "15",
+      "nombreCurso": "3° DE SECUNDARIA \"A\"",
+      "nivel": "SECUNDARIA",
+      "paralelo": "A",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "16",
+      "nombreCurso": "4° DE SECUNDARIA \"A\"",
+      "nivel": "SECUNDARIA",
+      "paralelo": "A",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "17",
+      "nombreCurso": "5° DE SECUNDARIA \"A\"",
+      "nivel": "SECUNDARIA",
+      "paralelo": "A",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "18",
+      "nombreCurso": "6° DE SECUNDARIA \"A\"",
+      "nivel": "SECUNDARIA",
+      "paralelo": "A",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "19",
+      "nombreCurso": "1° DE SECUNDARIA \"B\"",
+      "nivel": "SECUNDARIA",
+      "paralelo": "B",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "20",
+      "nombreCurso": "2° DE SECUNDARIA \"B\"",
+      "nivel": "SECUNDARIA",
+      "paralelo": "B",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "21",
+      "nombreCurso": "3° DE SECUNDARIA \"B\"",
+      "nivel": "SECUNDARIA",
+      "paralelo": "B",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "22",
+      "nombreCurso": "4° DE SECUNDARIA \"B\"",
+      "nivel": "SECUNDARIA",
+      "paralelo": "B",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "23",
+      "nombreCurso": "5° DE SECUNDARIA \"B\"",
+      "nivel": "SECUNDARIA",
+      "paralelo": "B",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": "24",
+      "nombreCurso": "6° DE SECUNDARIA \"B\"",
+      "nivel": "SECUNDARIA",
+      "paralelo": "B",
+      "estado": "ACTIVO"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "nombres": "Ana Torres",
+      "apellidoPaterno": "Torres",
+      "apellidoMaterno": "Gómez",
+      "cedulaIdentidadNumero": "12345678",
+      "cedulaIdentidadExpedido": "LP",
+      "email": "admin@admin.com",
+      "password": "$2b$12$HvYYF5K5kzK3NaDjBq9cQe8bdbC16zMeTu3A6zx5DeKH8K5Ed84ka",
+      "tipoPerfil": "ADMINISTRADOR",
+      "estado": "ACTIVO",
+      "colegioId": 1
+    },
+    {
+      "id": 2,
+      "nombres": "Luis",
+      "apellidoPaterno": "Pérez",
+      "apellidoMaterno": "Martínez",
+      "cedulaIdentidadNumero": "87654321",
+      "cedulaIdentidadExpedido": "CB",
+      "email": "l.perez@gmail.com",
+      "password": "$2b$12$HvYYF5K5kzK3NaDjBq9cQe8bdbC16zMeTu3A6zx5DeKH8K5Ed84ka",
+      "tipoPerfil": "ADMINISTRADOR",
+      "estado": "ACTIVO",
+      "colegioId": 2
+    },
+    {
+      "id": 3,
+      "nombres": "María",
+      "apellidoPaterno": "López",
+      "apellidoMaterno": "Hernández",
+      "cedulaIdentidadNumero": "11223344",
+      "cedulaIdentidadExpedido": "OR",
+      "email": "m.lopez@gmail.com",
+      "password": "$2b$12$HvYYF5K5kzK3NaDjBq9cQe8bdbC16zMeTu3A6zx5DeKH8K5Ed84ka",
+      "tipoPerfil": "ADMINISTRADOR",
+      "estado": "ACTIVO",
+      "colegioId": 3
+    },
+    {
+      "id": 4,
+      "nombres": "Pedro",
+      "apellidoPaterno": "Gómez",
+      "apellidoMaterno": "Ramírez",
+      "cedulaIdentidadNumero": "33445566",
+      "cedulaIdentidadExpedido": "LP",
+      "email": "",
+      "password": "",
+      "tipoPerfil": "PROFESOR",
+      "estado": "ACTIVO",
+      "colegioId": 1
+    },
+    {
+      "id": 5,
+      "nombres": "Laura",
+      "apellidoPaterno": "Martínez",
+      "apellidoMaterno": "Sánchez",
+      "cedulaIdentidadNumero": "99887766",
+      "cedulaIdentidadExpedido": "CB",
+      "email": "",
+      "password": "",
+      "tipoPerfil": "PROFESOR",
+      "estado": "ACTIVO",
+      "colegioId": 2
+    },
+    {
+      "id": 6,
+      "nombres": "Carlos",
+      "apellidoPaterno": "Díaz",
+      "apellidoMaterno": "Fernández",
+      "cedulaIdentidadNumero": "55667788",
+      "cedulaIdentidadExpedido": "OR",
+      "email": "",
+      "password": "",
+      "tipoPerfil": "PROFESOR",
+      "estado": "ACTIVO",
+      "colegioId": 3
+    },
+    {
+      "id": 7,
+      "nombres": "Elena",
+      "apellidoPaterno": "Suárez",
+      "apellidoMaterno": "García",
+      "cedulaIdentidadNumero": "22334455",
+      "cedulaIdentidadExpedido": "LP",
+      "email": "",
+      "password": "",
+      "tipoPerfil": "ESTUDIANTE",
+      "estado": "ACTIVO",
+      "colegioId": 1
+    },
+    {
+      "id": 8,
+      "nombres": "Andrés",
+      "apellidoPaterno": "Rojas",
+      "apellidoMaterno": "López",
+      "cedulaIdentidadNumero": "66778899",
+      "cedulaIdentidadExpedido": "CB",
+      "email": "",
+      "password": "",
+      "tipoPerfil": "ESTUDIANTE",
+      "estado": "ACTIVO",
+      "colegioId": 2
+    },
+    {
+      "id": 9,
+      "nombres": "Sofía",
+      "apellidoPaterno": "Mendoza",
+      "apellidoMaterno": "Gómez",
+      "cedulaIdentidadNumero": "44556677",
+      "cedulaIdentidadExpedido": "OR",
+      "email": "",
+      "password": "",
+      "tipoPerfil": "ESTUDIANTE",
+      "estado": "ACTIVO",
+      "colegioId": 3
+    }
+  ],
+  "profesores": [
+    {
+      "id": 1,
+      "tituloAcademico": "LICENCIATURA EN EDUCACIÓN",
+      "numeroCelular": "71234567",
+      "estado": "ACTIVO",
+      "userId": 4
+    },
+    {
+      "id": 2,
+      "tituloAcademico": "MAESTRÍA EN CIENCIAS DE LA EDUCACIÓN",
+      "numeroCelular": "69876543",
+      "estado": "ACTIVO",
+      "userId": 5
+    },
+    {
+      "id": 3,
+      "tituloAcademico": "DOCTORADO EN EDUCACIÓN",
+      "numeroCelular": "65432123",
+      "estado": "ACTIVO",
+      "userId": 6
+    }
+  ],
+  "estudiantes": [
+    {
+      "id": 1,
+      "saludAlergias": "NINGUNO",
+      "saludGrupoSanguineo": "A+",
+      "estado": "ACTIVO",
+      "userId": 7,
+      "cursoId": 1
+    },
+    {
+      "id": 2,
+      "saludAlergias": "AL POLVO",
+      "saludGrupoSanguineo": "B+",
+      "estado": "ACTIVO",
+      "userId": 8,
+      "cursoId": 13
+    },
+    {
+      "id": 3,
+      "saludAlergias": "A LAS MASCOTAS",
+      "saludGrupoSanguineo": "O-",
+      "estado": "ACTIVO",
+      "userId": 9,
+      "cursoId": 19
+    }
+  ],
+  "asignaturas": [
+    {
+      "id": 1,
+      "nombreAsignatura": "MATEMÁTICA",
+      "abreviatura": "MAT",
+      "estado": "ACTIVO",
+      "profesorId": 1
+    },
+    {
+      "id": 2,
+      "nombreAsignatura": "CIENCIAS SOCIALES",
+      "abreviatura": "C.S.",
+      "estado": "ACTIVO",
+      "profesorId": 2
+    },
+    {
+      "id": 3,
+      "nombreAsignatura": "LENGUAJE Y LITERATURA",
+      "abreviatura": "LEN",
+      "estado": "ACTIVO",
+      "profesorId": 3
+    }
+  ],
+  "calificaciones": [
+    {
+      "id": 1,
+      "nota": "95",
+      "gestion": "2025",
+      "trimestre": "1",
+      "estudianteId": 1,
+      "asignaturaId": 1
+    },
+    {
+      "id": 2,
+      "nota": "88",
+      "gestion": "2025",
+      "trimestre": "1",
+      "estudianteId": 1,
+      "asignaturaId": 2
+    },
+    {
+      "id": 3,
+      "nota": "76",
+      "gestion": "2025",
+      "trimestre": "1",
+      "estudianteId": 1,
+      "asignaturaId": 3
+    },
+    {
+      "id": 4,
+      "nota": "85",
+      "gestion": "2025",
+      "trimestre": "2",
+      "estudianteId": 2,
+      "asignaturaId": 1
+    },
+    {
+      "id": 5,
+      "nota": "90",
+      "gestion": "2025",
+      "trimestre": "2",
+      "estudianteId": 2,
+      "asignaturaId": 2
+    },
+    {
+      "id": 6,
+      "nota": "82",
+      "gestion": "2025",
+      "trimestre": "2",
+      "estudianteId": 2,
+      "asignaturaId": 3
+    },
+    {
+      "id": 7,
+      "nota": "78",
+      "gestion": "2025",
+      "trimestre": "3",
+      "estudianteId": 3,
+      "asignaturaId": 1
+    },
+    {
+      "id": 8,
+      "nota": "92",
+      "gestion": "2025",
+      "trimestre": "3",
+      "estudianteId": 3,
+      "asignaturaId": 2
+    },
+    {
+      "id": 9,
+      "nota": "89",
+      "gestion": "2025",
+      "trimestre": "3",
+      "estudianteId": 3,
+      "asignaturaId": 3
+    }
+  ]
 }

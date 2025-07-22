@@ -1,8 +1,9 @@
 <template>
     <div class="container mt-4">
-        <h2 class="mb-4 fw-bold">Gestión de Cursos</h2>
+        <h2 class="mb-4 fw-bold">← Gestión de Cursos →</h2>
 
         <!-- Filtros y Búsqueda -->
+        <h3 class="mb-4 fw-bold text-start"><i class="fas fa-filter"></i> Filtros y <i class="fas fa-search"></i> Búsqueda:</h3>
         <div class="row mb-3">
             <div class="col-md-4">
                 <input type="text" class="form-control" placeholder="Buscar..." v-model="searchTerm" />
@@ -34,6 +35,7 @@
         </div>
 
         <!-- Tabla -->
+        <h3 class="mb-4 fw-bold text-start"><i class="fas fa-table"></i> Registros:</h3>
         <table class="table table-bordered table-hover table-striped">
             <thead class="table-light">
                 <tr>
