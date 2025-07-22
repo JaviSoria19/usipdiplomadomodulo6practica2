@@ -10,12 +10,12 @@ app.db = router.db;
 
 const rules = auth.rewriter({
   users: 660,
-  cursos: 640,
-  colegios: 640,
-  profesores: 640,
-  estudiantes: 640,
-  asignaturas: 640,
-  calificaciones: 640
+  cursos: 666,
+  colegios: 666,
+  profesores: 666,
+  estudiantes: 666,
+  asignaturas: 666,
+  calificaciones: 666
 });
 
 app.use(cors());

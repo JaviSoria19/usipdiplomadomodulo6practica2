@@ -1,6 +1,7 @@
 <template>
   <nav v-if="$route.path !== '/login'" class="bg-primary text-white">
     <router-link to="/" class="text-white">Cerrar Sesión</router-link> | 
+    <router-link to="/cursos" class="text-white">Cursos</router-link> |
   </nav>
   <router-view/>
 </template>
