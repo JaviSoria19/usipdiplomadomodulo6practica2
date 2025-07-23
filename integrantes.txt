@@ -15,6 +15,8 @@ npm install
 
 2. Iniciar el servicio backend (JSON-Server + JSON-Server-Auth) desde el directorio db/ con el comando:
 npm start
+o
+node server.js
 
 3. Iniciar el servicio frontend (Vue3) desde la raíz con el comando:
 npm run serve
