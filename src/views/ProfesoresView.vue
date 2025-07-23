@@ -2,12 +2,19 @@
     <div class="container mt-4">
         <h2 class="mb-4 fw-bold">← Gestión de Profesores →</h2>
 
-        <h3 class="mb-4 fw-bold text-start"><i class="fas fa-search"></i> Búsqueda:</h3>
+        <h3 class="mb-4 fw-bold text-start"><i class="fas fa-search"></i> Búsqueda y <i class="fas fa-filter"></i> Filtro:</h3>
         <div class="row mb-3">
             <div class="col-md-6">
-                <input type="text" class="form-control" placeholder="Buscar profesor..." v-model="searchTerm" />
+                <input type="text" class="form-control" placeholder="Buscar..." v-model="searchTerm" />
             </div>
-            <div class="col-md-6 text-end">
+            <div class="col-md-3">
+                <select class="form-select" v-model="searchTerm">
+                    <option value="">Todos los estados</option>
+                    <option>ACTIVO</option>
+                    <option>INACTIVO</option>
+                </select>
+            </div>
+            <div class="col-md-3 text-end">
                 <button class="btn btn-success" @click="abrirCrear"><i class="fas fa-chalkboard-teacher"></i> Nuevo Profesor</button>
             </div>
         </div>
@@ -21,6 +28,7 @@
                     <th>C.I.</th>
                     <th>Título</th>
                     <th>Celular</th>
+                    <th>Estado</th>
                     <th class="text-center">Acciones</th>
                 </tr>
             </thead>
@@ -31,6 +39,7 @@
                     <td>{{ profesor.user?.cedulaIdentidadNumero }} {{ profesor.user?.cedulaIdentidadExpedido }}</td>
                     <td>{{ profesor.tituloAcademico }}</td>
                     <td>{{ profesor.numeroCelular }}</td>
+                    <td>{{ profesor.estado }}</td>
                     <td class="text-center">
                         <button class="btn btn-warning btn-sm me-2" @click="abrirEditar(profesor)"><i class="fas fa-pen"></i> Editar</button>
                         <button class="btn btn-danger btn-sm" @click="eliminarProfesor(profesor.id)"><i class="fas fa-trash"></i> Eliminar</button>

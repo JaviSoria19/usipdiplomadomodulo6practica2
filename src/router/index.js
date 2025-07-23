@@ -7,6 +7,7 @@ import UsersView from '../views/UsersView.vue'
 import ProfesoresView from '../views/ProfesoresView.vue'
 import EstudiantesView from '../views/EstudiantesView.vue'
 import AsignaturasView from '../views/AsignaturasView.vue'
+import CalificacionesView from '../views/CalificacionesView.vue'
 
 const routes = [
   {
@@ -50,6 +51,11 @@ const routes = [
   {
     path: '/asignaturas',
     component: AsignaturasView,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/calificaciones',
+    component: CalificacionesView,
     meta: { requiresAuth: true }
   }
 ]

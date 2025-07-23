@@ -3,10 +3,17 @@
         <h2 class="mb-4 fw-bold">← Gestión de Colegios →</h2>
 
         <!-- Búsqueda -->
-        <h3 class="mb-4 fw-bold text-start"><i class="fas fa-search"></i> Búsqueda:</h3>
+        <h3 class="mb-4 fw-bold text-start"><i class="fas fa-search"></i> Búsqueda y <i class="fas fa-filter"></i> Filtro:</h3>
         <div class="row mb-3">
-            <div class="col-md-10">
-                <input type="text" class="form-control" placeholder="Buscar colegio..." v-model="searchTerm" />
+            <div class="col-md-8">
+                <input type="text" class="form-control" placeholder="Buscar..." v-model="searchTerm" />
+            </div>
+            <div class="col-md-2">
+                <select class="form-select" v-model="filtroEstado">
+                    <option value="">Todos los estados</option>
+                    <option>ACTIVO</option>
+                    <option>INACTIVO</option>
+                </select>
             </div>
             <div class="col-md-2">
                 <button class="btn btn-success w-100" @click="abrirCrear"><i class="fas fa-school"></i> Nuevo Colegio</button>
@@ -59,6 +66,7 @@ const mostrarModal = ref(false)
 const modoEdicion = ref(false)
 const colegioEditado = ref(null)
 const searchTerm = ref('')
+const filtroEstado = ref('')
 
 const cargarColegios = async () => {
     const { data } = await axios.get('/colegios')
@@ -66,11 +74,14 @@ const cargarColegios = async () => {
 }
 
 const colegiosFiltrados = computed(() => {
-    return colegios.value.filter(c =>
-        Object.values(c).some(valor =>
-            valor.toString().toLowerCase().includes(searchTerm.value.toLowerCase())
+    const textoBusqueda = searchTerm.value.toLowerCase()
+    return colegios.value.filter(colegio => {
+        const coincideBusqueda = Object.values(colegio).some(value =>
+            value?.toString().toLowerCase().includes(textoBusqueda)
         )
-    )
+        const coincideEstado = !filtroEstado.value || (colegio.estado === filtroEstado.value)
+        return coincideBusqueda && coincideEstado
+    })
 })
 
 const abrirCrear = () => {

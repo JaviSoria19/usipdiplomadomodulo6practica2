@@ -4,7 +4,7 @@
       <div class="modal-content">
         <form @submit.prevent="guardar">
           <div class="modal-header">
-            <h5 class="modal-title">{{ modoEdicion ? 'Editar Estudiante' : 'Nuevo Estudiante' }}</h5>
+            <h5 class="modal-title fw-bold">{{ modoEdicion ? 'Editar Estudiante' : 'Nuevo Estudiante' }}</h5>
             <button type="button" class="btn-close" @click="$emit('cerrar')"></button>
           </div>
           <div class="modal-body fw-bold text-start">

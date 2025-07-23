@@ -3,10 +3,10 @@
         <h2 class="mb-4 fw-bold">← Gestión de Usuarios →</h2>
 
         <!-- Filtro y Búsqueda -->
-        <h3 class="mb-4 fw-bold text-start"><i class="fas fa-filter"></i> Filtros y <i class="fas fa-search"></i>
-            Búsqueda:</h3>
+        <h3 class="mb-4 fw-bold text-start"><i class="fas fa-search"></i> Búsqueda y <i class="fas fa-filter"></i>
+            Filtros:</h3>
         <div class="row mb-3">
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <input type="text" class="form-control" placeholder="Buscar..." v-model="searchTerm" />
             </div>
             <div class="col-md-2">
@@ -23,7 +23,7 @@
                     <option>TJ</option>
                 </select>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <select class="form-select" v-model="filtroPerfil">
                     <option value="">Todos los perfiles</option>
                     <option>ADMINISTRADOR</option>
@@ -32,7 +32,14 @@
                 </select>
             </div>
             <div class="col-md-2">
-                <button class="btn btn-success w-100" @click="abrirCrear"><i class="fas fa-users"></i> Nuevo Usuario</button>
+                <select class="form-select" v-model="filtroEstado">
+                    <option value="">Todos los estados</option>
+                    <option>ACTIVO</option>
+                    <option>INACTIVO</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-success" @click="abrirCrear"><i class="fas fa-users"></i> Nuevo Usuario</button>
             </div>
         </div>
 
@@ -82,6 +89,7 @@ const usuarioEditado = ref(null)
 const searchTerm = ref('')
 const filtroPerfil = ref('')
 const filtroExpedido = ref('')
+const filtroEstado = ref('')
 
 const cargarUsuarios = async () => {
     const { data } = await axios.get('/users')
@@ -96,7 +104,8 @@ const usersFiltrados = computed(() => {
         )
         const coincidePerfil = filtroPerfil.value === '' || u.tipoPerfil === filtroPerfil.value
         const coincideExpedido = filtroExpedido.value === '' || u.cedulaIdentidadExpedido === filtroExpedido.value
-        return coincideTexto && coincidePerfil && coincideExpedido
+        const coincideEstado = filtroEstado.value === '' || u.estado === filtroEstado.value
+        return coincideTexto && coincidePerfil && coincideExpedido && coincideEstado
     })
 })
 

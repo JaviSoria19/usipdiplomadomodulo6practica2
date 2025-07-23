@@ -8,30 +8,32 @@
             <button type="button" class="btn-close" @click="$emit('cerrar')"></button>
           </div>
           <div class="modal-body fw-bold text-start">
-            <div class="mb-3">
+            <div class="row g-3">
+              <div class="col-md-12">
               <label class="form-label">Nombre del Curso</label>
               <input v-model="form.nombreCurso" type="text" class="form-control" required />
             </div>
-            <div class="mb-3">
+            <div class="col-md-4">
               <label class="form-label">Nivel</label>
               <select v-model="form.nivel" class="form-select" required>
                 <option>PRIMARIA</option>
                 <option>SECUNDARIA</option>
               </select>
             </div>
-            <div class="mb-3">
+            <div class="col-md-4">
               <label class="form-label">Paralelo</label>
               <select v-model="form.paralelo" class="form-select" required>
                 <option>A</option>
                 <option>B</option>
               </select>
             </div>
-            <div class="mb-3">
+            <div class="col-md-4">
               <label class="form-label">Estado</label>
               <select v-model="form.estado" class="form-select" required>
                 <option>ACTIVO</option>
                 <option>INACTIVO</option>
               </select>
+            </div>
             </div>
           </div>
           <div class="modal-footer">

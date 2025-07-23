@@ -7,7 +7,8 @@
     <router-link to="/cursos" class="bg-info p-2 rounded"><i class="fas fa-chalkboard"></i> Cursos</router-link> | 
     <router-link to="/profesores" class="bg-info p-2 rounded"><i class="fas fa-chalkboard-teacher"></i> Profesores</router-link> | 
     <router-link to="/estudiantes" class="bg-info p-2 rounded"><i class="fas fa-user-graduate"></i> Estudiantes</router-link> | 
-    <router-link to="/asignaturas" class="bg-info p-2 rounded"><i class="fas fa-book"></i> Asignaturas</router-link>
+    <router-link to="/asignaturas" class="bg-info p-2 rounded"><i class="fas fa-book"></i> Asignaturas</router-link> | 
+    <router-link to="/calificaciones" class="bg-info p-2 rounded"><i class="fas fa-star"></i> Calificaciones</router-link>
   </nav>
   <router-view/>
 </template>

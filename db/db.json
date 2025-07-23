@@ -22,14 +22,14 @@
       "direccion": "Av. Principal 789",
       "telefono": "456-789-1230",
       "sitioWeb": "www.colegiotecnicosanmartin.edu",
-      "estado": "ACTIVO"
+      "estado": "INACTIVO"
     },
     {
       "nombreColegio": "Federico Froebel",
       "direccion": "Calle Capuchinas Esq. Madre Perla",
       "telefono": "4-4200750",
       "sitioWeb": "www.froebel.edu.bo",
-      "estado": "ACTIVO",
+      "estado": "INACTIVO",
       "id": 4
     }
   ],
@@ -349,7 +349,7 @@
     },
     {
       "email": "j.penharrieta@gmail.com",
-      "password": "$2a$10$CHa5.Yob9zwFcnuRm1.Xh.GyzYF6/tzY.dGXGXopfiaj3KK2Hn39O",
+      "password": "$2a$10$3vL1tTZ8pqnV0wDbryiXC.Hu1E95btsXo31po5fKkaa/e6/fX4Hzu",
       "nombres": "Juan",
       "apellidoPaterno": "Peñarrieta",
       "apellidoMaterno": "Ramos",
@@ -384,11 +384,11 @@
       "userId": 6
     },
     {
+      "id": 4,
       "tituloAcademico": "MAGISTER EN EDUCACIÓN, INGENIERÍA EN FÍSICA",
       "numeroCelular": "723423",
       "estado": "ACTIVO",
-      "userId": 11,
-      "id": 4
+      "userId": 11
     }
   ],
   "estudiantes": [
@@ -420,7 +420,7 @@
       "id": 4,
       "saludAlergias": "NINGUNA",
       "saludGrupoSanguineo": "O+",
-      "estado": "ACTIVO",
+      "estado": "INACTIVO",
       "userId": 12,
       "cursoId": "19"
     }
@@ -436,7 +436,7 @@
     {
       "id": 2,
       "nombreAsignatura": "CIENCIAS SOCIALES",
-      "abreviatura": "C.S.",
+      "abreviatura": "C.S",
       "estado": "ACTIVO",
       "profesorId": 2
     },
